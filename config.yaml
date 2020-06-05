@@ -1,0 +1,15 @@
+master_endpoint: "https://sbmirror.etcinit.com/latest.db"
+fetch_every: 300 # Fetch a new db every n seconds
+hash_algo: sha3_256
+db_cache_dir: "/tmp/databases/snapshots"
+db_staging_location: "/tmp/databases/tmp.db"
+
+persistent_path: "/tmp/persistent.yaml"
+persistent_store_interval: 60
+
+# Note that this is not a hard upper limit, but rather the size that it is cut
+# down to after every purge.
+max_working_set_size: 10 GiB
+purge_interval: 3600
+
+log_level: info
